@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let create = prompt("enter option");
+        let dname;
+        let daccno;
+        let dammount;
+
+        if (create == 1) {
+            dname = prompt("enter your name");
+            daccno = prompt("enter acc no:");
+            dammount = Number(prompt("enter amount"));
+            console.log(dammount);
+            console.log("account created;")
+
+            let confermation = confirm("want to debit or widthdra amount?");
+
+            if (confermation == true) {
+                let cash = confirm("debit=ok  no withdravel=no!");
+
+                if (cash == true) {
+                    const rename = prompt("enter your name again");
+                    let reaccno = prompt("enter your account no");
+                    if (rename == dname && daccno == daccno) {
+                        let deposit = Number(prompt("enter deposit amount"));
+                        dammount += deposit;
+
+                        console.log("remains" + dammount)
+                    }
+                    else {
+                        console.log("account invalid!!!!")
+                    }
+                }
+                else {
+                    let withdraconfermation = confirm("this is an withdravel do you continue press yes otherwise no");
+
+                    if (withdraconfermation == true) {
+                        const rename = prompt("enter your name again");
+                        let reaccno = prompt("enter your account no");
+                        if (rename == dname && daccno == daccno) {
+                            let deposit = Number(prompt("enter deposit amount"));
+                            dammount -= deposit;
+
+                            console.log("remains" + dammount)
+                        }
+                        else {
+                            console.log("account invalid!!!!")
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+
+        }
+
+
+
+        // else if (create == 3) {
+        //     const rename = prompt("enter your name again");
+        //     let reaccno = prompt("enter your account no");
+        //     if (rename == name && accno == reaccno) {
+        //         let deposit = prompt("enter deposit amount");
+        //         amount -= deposit;
+        //     }
+        //     else {
+        //         console.log("account invalid!!!!")
+        //     }
+        // }
+
+        // else if (create == 4) {
+        //     console.log("your name: " + name);
+        //     console.log("your accno: " + accno);
+        //     console.log("your name: " + amount);
+        // }
+
+        else {
+            console.log("transaction failed!!!!")
+        }
+
+
+        //deposit amount
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

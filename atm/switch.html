@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+
+        let dname;
+        let daccno;
+        let dammount;
+
+        let temp = true;
+        while (temp) {
+            let option = Number(prompt("enter option \n 1.create account \n 2.deposit \n 3.withdravel \n 4.balance inquiry \n 5.exit!"));
+            switch (option) {
+                case 1:
+                    dname = prompt("enter your name: ");
+                    daccno = prompt("enter accno");
+                    dammount = parseInt(prompt("enter the amount!"));
+                    alert("Account created successfully!");
+                    break;
+
+                case 2:
+                    let rename = prompt("enter your name again: ");
+                    let reaccno = prompt("enter accno");
+
+                    if (rename == dname && daccno == reaccno) {
+                        let reamount = parseInt(prompt("enter your deposit amount : "));
+                        console.log(typeof (reamount))
+                        dammount += reamount;
+                    }
+                    else {
+                        console.log("invalid!")
+                    }
+                    break;
+                case 3:
+
+                    let dename = prompt("enter your name again: ");
+                    let deaccno = prompt("enter accno");
+
+                    if (dename == dname && daccno == deaccno) {
+                        let weamount = parseInt(prompt("enter your withdravel amount : "));
+                        dammount -= weamount;
+                    }
+                    else {
+                        console.log("invalid!")
+                    }
+
+                    break;
+
+                case 4:
+
+                    let wename = prompt("enter your name again: ");
+                    let weaccno = prompt("enter accno");
+
+                    if (wename == dname && daccno == weaccno) {
+                        console.log("accound holder details")
+                        console.log("========================");
+                        console.log("Name : " + dname)
+                        console.log("Acc no : " + daccno)
+                        console.log("balance : " + dammount)
+                         console.log("========================");
+                    }
+                    else {
+                        console.log("invalid!")
+                    }
+                    break;
+                case 5:
+                    temp = false;
+                    break;
+
+
+
+            }
+
+
+        }
+     
+
+
+
+    </script>
+
+</body>
+
+</html>
