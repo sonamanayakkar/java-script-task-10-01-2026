@@ -24,7 +24,7 @@
                 case 1:
                     dname = prompt("enter your name: ");
                     daccno = prompt("enter accno");
-                    dammount = parseInt(prompt("enter the amount!"));
+                    dammount = parseFloat(prompt("enter initial amount!"));
                     alert("Account created successfully!");
                     break;
 
@@ -33,7 +33,7 @@
                     let reaccno = prompt("enter accno");
 
                     if (rename == dname && daccno == reaccno) {
-                        let reamount = parseInt(prompt("enter your deposit amount : "));
+                        let reamount = parseFloat(prompt("enter your deposit amount : "));
                         console.log(typeof (reamount))
                         dammount += reamount;
                     }
@@ -47,8 +47,15 @@
                     let deaccno = prompt("enter accno");
 
                     if (dename == dname && daccno == deaccno) {
-                        let weamount = parseInt(prompt("enter your withdravel amount : "));
-                        dammount -= weamount;
+                        let weamount = parseFloat(prompt("enter your withdravel amount : "));
+                        if (weamount < dammount) {
+                            dammount -= weamount;
+                        }
+                        else {
+                            alert("Accound balance is low!/n your balance is : " + dammount)
+                            console.log("Accound balance is low!")
+                        }
+
                     }
                     else {
                         console.log("invalid!")
@@ -67,7 +74,7 @@
                         console.log("Name : " + dname)
                         console.log("Acc no : " + daccno)
                         console.log("balance : " + dammount)
-                         console.log("========================");
+                        console.log("========================");
                     }
                     else {
                         console.log("invalid!")
@@ -83,7 +90,7 @@
 
 
         }
-     
+
 
 
 
